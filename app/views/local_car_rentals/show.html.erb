@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @local_car_rental.occurence %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @local_car_rental.cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @local_car_rental.description %>
+</p>
+
+<%= link_to 'Edit', edit_local_car_rental_path(@local_car_rental) %> |
+<%= link_to 'Back', local_car_rentals_path %>

@@ -1,0 +1,2 @@
+module LocalCarRentalsHelper
+end

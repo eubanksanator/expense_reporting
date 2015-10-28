@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @travel_cost.occurence %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @travel_cost.cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @travel_cost.description %>
+</p>
+
+<%= link_to 'Edit', edit_travel_cost_path(@travel_cost) %> |
+<%= link_to 'Back', travel_costs_path %>

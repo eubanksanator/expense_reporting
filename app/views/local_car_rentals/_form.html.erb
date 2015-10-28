@@ -1,0 +1,29 @@
+<%= form_for(@local_car_rental) do |f| %>
+  <% if @local_car_rental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@local_car_rental.errors.count, "error") %> prohibited this local_car_rental from being saved:</h2>
+
+      <ul>
+      <% @local_car_rental.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :occurence %><br>
+    <%= f.date_select :occurence %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

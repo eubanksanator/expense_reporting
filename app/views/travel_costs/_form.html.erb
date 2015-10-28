@@ -1,0 +1,29 @@
+<%= form_for(@travel_cost) do |f| %>
+  <% if @travel_cost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@travel_cost.errors.count, "error") %> prohibited this travel_cost from being saved:</h2>
+
+      <ul>
+      <% @travel_cost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :occurence %><br>
+    <%= f.date_select :occurence %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.number_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

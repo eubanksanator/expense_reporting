@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :cab_fare_and_tolls
+  resources :local_car_rentals
+  resources :travel_costs
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

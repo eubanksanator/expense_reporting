@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @cab_fare_and_toll.occurence %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @cab_fare_and_toll.cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cab_fare_and_toll.description %>
+</p>
+
+<%= link_to 'Edit', edit_cab_fare_and_toll_path(@cab_fare_and_toll) %> |
+<%= link_to 'Back', cab_fare_and_tolls_path %>
