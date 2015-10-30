@@ -1,10 +1,10 @@
-<%= form_for(@local_car_rental) do |f| %>
-  <% if @local_car_rental.errors.any? %>
+<%= form_for(@car_rental) do |f| %>
+  <% if @car_rental.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@local_car_rental.errors.count, "error") %> prohibited this local_car_rental from being saved:</h2>
+      <h2><%= pluralize(@car_rental.errors.count, "error") %> prohibited this local_car_rental from being saved:</h2>
 
       <ul>
-      <% @local_car_rental.errors.full_messages.each do |message| %>
+      <% @car_rental.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

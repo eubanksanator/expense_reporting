@@ -1,7 +1,7 @@
 
 User.destroy_all
-CabFareAndToll.destroy_all
-LocalCarRental.destroy_all
+CabFare.destroy_all
+CarRental.destroy_all
 TravelCost.destroy_all
 
 @users = User.all
@@ -12,9 +12,9 @@ TravelCost.destroy_all
 end
 
 @users.each do |user|
-  CabFareAndToll.create!(occurence: Faker::Date.forward(@day_num), cost: Faker::Commerce.price, user_id: user.id)
+  CabFare.create!(occurence: Faker::Date.forward(@day_num), cost: Faker::Commerce.price, user_id: user.id)
   @day_num += 2
-  LocalCarRental.create!(occurence: Faker::Date.forward(@day_num), cost: Faker::Commerce.price, user_id: user.id)
+  CarRental.create!(occurence: Faker::Date.forward(@day_num), cost: Faker::Commerce.price, user_id: user.id)
   TravelCost.create!(occurence: Faker::Date.forward(@day_num), cost: Faker::Commerce.price, user_id: user.id)
 end
 # 10.times do
@@ -23,5 +23,6 @@ end
 # end
 
 puts "Created #{User.count} users"
-puts "Created #{CabFareAndToll.count} cab fare and tolls"
+puts "Created #{CabFare.count} cab fare and tolls"
+puts "Created #{CarRental.count} car rentals"
 puts "Created #{TravelCost.count} travel costs"
