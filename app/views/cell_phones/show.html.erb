@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @cell_phone.occurence %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @cell_phone.cost %>
+</p>
+
+<%= link_to 'Edit', edit_cell_phone_path(@cell_phone) %> |
+<%= link_to 'Back', cell_phones_path %>

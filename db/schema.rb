@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030121947) do
+ActiveRecord::Schema.define(version: 20151112185841) do
 
   create_table "cab_fares", force: :cascade do |t|
     t.date     "occurence"
-    t.integer  "cost"
+    t.decimal  "cost"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -24,16 +24,32 @@ ActiveRecord::Schema.define(version: 20151030121947) do
 
   create_table "car_rentals", force: :cascade do |t|
     t.date     "occurence"
-    t.integer  "cost"
+    t.decimal  "cost"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  create_table "cell_phones", force: :cascade do |t|
+    t.date     "occurence"
+    t.decimal  "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employee_meals", force: :cascade do |t|
+    t.date     "occurence"
+    t.decimal  "breakfast"
+    t.decimal  "lunch"
+    t.decimal  "dinner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "travel_costs", force: :cascade do |t|
     t.date     "occurence"
-    t.integer  "cost"
+    t.decimal  "cost"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false

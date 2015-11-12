@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  occurence: 2015-11-12
+  breakfast: MyString
+  lunch: MyString
+  dinner: MyString
+
+two:
+  occurence: 2015-11-12
+  breakfast: MyString
+  lunch: MyString
+  dinner: MyString

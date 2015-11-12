@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @employee_meal.occurence %>
+</p>
+
+<p>
+  <strong>Breakfast:</strong>
+  <%= @employee_meal.breakfast %>
+</p>
+
+<p>
+  <strong>Lunch:</strong>
+  <%= @employee_meal.lunch %>
+</p>
+
+<p>
+  <strong>Dinner:</strong>
+  <%= @employee_meal.dinner %>
+</p>
+
+<%= link_to 'Edit', edit_employee_meal_path(@employee_meal) %> |
+<%= link_to 'Back', employee_meals_path %>
