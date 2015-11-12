@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  occurence: 2015-11-12
+  meals: 9.99
+  enter: 9.99
+
+two:
+  occurence: 2015-11-12
+  meals: 9.99
+  enter: 9.99

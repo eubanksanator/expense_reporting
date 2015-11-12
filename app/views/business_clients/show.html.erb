@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @business_client.occurence %>
+</p>
+
+<p>
+  <strong>Meals:</strong>
+  <%= @business_client.meals %>
+</p>
+
+<p>
+  <strong>Enter:</strong>
+  <%= @business_client.enter %>
+</p>
+
+<%= link_to 'Edit', edit_business_client_path(@business_client) %> |
+<%= link_to 'Back', business_clients_path %>

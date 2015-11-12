@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Business Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Occurence</th>
+      <th>Meals</th>
+      <th>Enter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_clients.each do |business_client| %>
+      <tr>
+        <td><%= business_client.occurence %></td>
+        <td><%= business_client.meals %></td>
+        <td><%= business_client.enter %></td>
+        <td><%= link_to 'Show', business_client %></td>
+        <td><%= link_to 'Edit', edit_business_client_path(business_client) %></td>
+        <td><%= link_to 'Destroy', business_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Business client', new_business_client_path %>

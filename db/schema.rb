@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112185841) do
+ActiveRecord::Schema.define(version: 20151112191144) do
+
+  create_table "business_clients", force: :cascade do |t|
+    t.date     "occurence"
+    t.decimal  "meals"
+    t.decimal  "enter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cab_fares", force: :cascade do |t|
     t.date     "occurence"
@@ -45,6 +53,14 @@ ActiveRecord::Schema.define(version: 20151112185841) do
     t.decimal  "dinner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "other_expenses", force: :cascade do |t|
+    t.date     "occurence"
+    t.text     "description"
+    t.decimal  "cost"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "travel_costs", force: :cascade do |t|

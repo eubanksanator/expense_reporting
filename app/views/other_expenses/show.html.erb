@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @other_expense.occurence %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @other_expense.description %>
+</p>
+
+<%= link_to 'Edit', edit_other_expense_path(@other_expense) %> |
+<%= link_to 'Back', other_expenses_path %>
