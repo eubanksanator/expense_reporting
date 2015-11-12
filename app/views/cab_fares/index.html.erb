@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-    <% @cab_fare_and_tolls.each do |cab_fare_and_toll| %>
+    <% @cab_fares.each do |cab_fare| %>
       <tr>
-        <td><%= cab_fare_and_toll.occurence %></td>
-        <td><%= cab_fare_and_toll.cost %></td>
-        <td><%= cab_fare_and_toll.description %></td>
-        <td><%= link_to 'Show', cab_fare_and_toll %></td>
-        <td><%= link_to 'Edit', edit_cab_fare_and_toll_path(cab_fare_and_toll) %></td>
-        <td><%= link_to 'Destroy', cab_fare_and_toll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= cab_fare.occurence %></td>
+        <td><%= cab_fare.cost %></td>
+        <td><%= cab_fare.description %></td>
+        <td><%= link_to 'Show', cab_fare %></td>
+        <td><%= link_to 'Edit', edit_cab_fare_path(cab_fare) %></td>
+        <td><%= link_to 'Destroy', cab_fare, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Cab fare and toll', new_cab_fare_and_toll_path %>
+<%= link_to 'New Cab fare', new_cab_fare_path %>

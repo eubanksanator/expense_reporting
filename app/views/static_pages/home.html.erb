@@ -1,4 +1,4 @@
-<h1>Select expense form to fill out</h1>
+<h1>Expense Forms</h1>
 
 <div class="row">
   <div class="col-md-12">
@@ -10,35 +10,36 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">New Cab Fare Expense</div>
+<hr>
+
+<div class="row ex-form">
+  <div class="col-md-8">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4>New Cab Fare Expense</h4></div>
         <div class="panel-body">
           <%= render 'cab_fares/form', :@cab_fare => CabFare.new %>
         </div>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">New Car Rental Expense</div>
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4>New Car Rental Expense</h4></div>
         <div class="panel-body">
           <%= render 'car_rentals/form', :@car_rental => CarRental.new %>
         </div>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">New Travel Cost Expense</div>
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4>New Travel Cost Expense</h4></div>
         <div class="panel-body">
           <%= render 'travel_costs/form', :@travel_cost => TravelCost.new %>
         </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-
-</div>
