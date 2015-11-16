@@ -16,6 +16,10 @@
     <%= f.date_select :occurence %>
   </div>
   <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost, placeholder: '$' %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
