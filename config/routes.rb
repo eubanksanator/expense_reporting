@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :entertain_expense_explanations
   resources :other_expenses
   resources :business_clients
   resources :cell_phones

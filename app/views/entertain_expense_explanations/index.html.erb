@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Entertain Expense Explanations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Occurence</th>
+      <th>Location</th>
+      <th>Business purpose</th>
+      <th>Person entertained</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entertain_expense_explanations.each do |entertain_expense_explanation| %>
+      <tr>
+        <td><%= entertain_expense_explanation.occurence %></td>
+        <td><%= entertain_expense_explanation.location %></td>
+        <td><%= entertain_expense_explanation.business_purpose %></td>
+        <td><%= entertain_expense_explanation.person_entertained %></td>
+        <td><%= entertain_expense_explanation.amount %></td>
+        <td><%= link_to 'Show', entertain_expense_explanation %></td>
+        <td><%= link_to 'Edit', edit_entertain_expense_explanation_path(entertain_expense_explanation) %></td>
+        <td><%= link_to 'Destroy', entertain_expense_explanation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entertain expense explanation', new_entertain_expense_explanation_path %>

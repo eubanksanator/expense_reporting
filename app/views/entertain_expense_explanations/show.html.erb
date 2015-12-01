@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occurence:</strong>
+  <%= @entertain_expense_explanation.occurence %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @entertain_expense_explanation.location %>
+</p>
+
+<p>
+  <strong>Business purpose:</strong>
+  <%= @entertain_expense_explanation.business_purpose %>
+</p>
+
+<p>
+  <strong>Person entertained:</strong>
+  <%= @entertain_expense_explanation.person_entertained %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @entertain_expense_explanation.amount %>
+</p>
+
+<%= link_to 'Edit', edit_entertain_expense_explanation_path(@entertain_expense_explanation) %> |
+<%= link_to 'Back', entertain_expense_explanations_path %>

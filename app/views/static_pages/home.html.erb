@@ -17,13 +17,17 @@
 <hr>
 
 <div class="panel panel-default">
-  <div class="panel-heading"><h4>Auto Cost</h4></div>
+  <div class="panel-heading">
+    <h4>Auto Cost</h4>
+  </div>
   <div class="panel-body">
     <div class="row ex-form">
       <div class="col-md-12">
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h4>New Cab Fare Expense</h4></div>
+            <div class="panel-heading">
+              <h4>Cab Fare Expense</h4>
+            </div>
             <div class="panel-body">
               <%= render 'cab_fares/form', :@cab_fare => CabFare.new %>
             </div>
@@ -32,7 +36,9 @@
 
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h4>New Car Rental Expense</h4></div>
+            <div class="panel-heading">
+              <h4>Car Rental Expense</h4>
+            </div>
             <div class="panel-body">
               <%= render 'car_rentals/form', :@car_rental => CarRental.new %>
             </div>
@@ -41,7 +47,9 @@
 
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h4>New Travel Cost Expense</h4></div>
+            <div class="panel-heading">
+              <h4>Travel Cost Expense</h4>
+            </div>
             <div class="panel-body">
               <%= render 'travel_costs/form', :@travel_cost => TravelCost.new %>
             </div>
@@ -53,13 +61,17 @@
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading"><h4>Meals and Cell Cost</h4></div>
+  <div class="panel-heading">
+    <h4>Meals and Cell Cost</h4>
+  </div>
   <div class="panel-body">
     <div class="row ex-form">
       <div class="col-md-12">
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h4>New Employee Meal Expense</h4></div>
+            <div class="panel-heading">
+              <h4>Employee Meal Expense</h4>
+            </div>
             <div class="panel-body">
               <%= render 'employee_meals/form', :@employee_meal => EmployeeMeal.new %>
             </div>
@@ -68,12 +80,48 @@
 
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading"><h4>New Cell Expense</h4></div>
+            <div class="panel-heading">
+              <h4>Cell Expense</h4>
+            </div>
             <div class="panel-body">
               <%= render 'cell_phones/form', :@cell_phone => CellPhone.new %>
             </div>
           </div>
         </div>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Business (Clients)</h4>
+            </div>
+            <div class="panel-body">
+              <%= render 'business_clients/form', :@business_client => BusinessClient.new %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row ex-form">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Other Expense</h4>
+      </div>
+      <div class="panel-body">
+        <%= render 'other_expenses/form', :@other_expense => OtherExpense.new %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>Explanation of Entertainment Expenses</h4>
+      </div>
+      <div class="panel-body">
+        <%= render 'entertain_expense_explanations/form', :@entertain_expense_explanation => EntertainExpenseExplanation.new %>
       </div>
     </div>
   </div>

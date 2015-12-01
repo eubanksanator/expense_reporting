@@ -69,6 +69,6 @@ class OtherExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def other_expense_params
-      params.require(:other_expense).permit(:occurence, :description)
+      params.require(:other_expense).permit(:occurence, :description, :cost)
     end
 end
