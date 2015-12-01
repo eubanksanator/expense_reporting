@@ -1,29 +1,44 @@
 <%= form_for(@business_client) do |f| %>
-  <% if @business_client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@business_client.errors.count, "error") %> prohibited this business_client from being saved:</h2>
+<% if @business_client.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@business_client.errors.count, "error") %> prohibited this business_client from being saved:</h2>
 
-      <ul>
-      <% @business_client.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @business_client.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
+<div class="field">
+  <%= f.label :occurence %><br>
+  <%= f.date_select :occurence %>
+</div>
+<div class="field">
+  <%= f.label :meals %><br>
+  <%= f.text_field :meals, placeholder: '$' %>
+</div>
+<hr>
+<div class="entertain">
   <div class="field">
-    <%= f.label :occurence %><br>
-    <%= f.date_select :occurence %>
-  </div>
-  <div class="field">
-    <%= f.label :meals %><br>
-    <%= f.text_field :meals, placeholder: '$' %>
-  </div>
-  <div class="field">
-    <%= f.label :enter %><br>
+    <%= f.label 'Entertainment' %><br>
     <%= f.text_field :enter, placeholder: '$' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <%= f.label 'Location' %><br>
+    <%= f.text_field :location %>
   </div>
+  <div class="field">
+    <%= f.label 'Business Purpose' %><br>
+    <%= f.text_field :business_purpose %>
+  </div>
+  <div class="field">
+    <%= f.label 'Person Entertained' %><br>
+    <%= f.text_field :person_entertained %>
+  </div>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

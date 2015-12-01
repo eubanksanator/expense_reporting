@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201143821) do
+ActiveRecord::Schema.define(version: 20151201154417) do
 
   create_table "business_clients", force: :cascade do |t|
     t.date     "occurence"
     t.decimal  "meals"
     t.decimal  "enter"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "location"
+    t.string   "business_purpose"
+    t.string   "person_entertained"
   end
 
   create_table "cab_fares", force: :cascade do |t|
@@ -53,17 +56,6 @@ ActiveRecord::Schema.define(version: 20151201143821) do
     t.decimal  "dinner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "entertain_expense_explanations", force: :cascade do |t|
-    t.date     "occurence"
-    t.string   "location"
-    t.string   "business_purpose"
-    t.string   "person_entertained"
-    t.decimal  "amount"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "business_client_id"
   end
 
   create_table "other_expenses", force: :cascade do |t|
